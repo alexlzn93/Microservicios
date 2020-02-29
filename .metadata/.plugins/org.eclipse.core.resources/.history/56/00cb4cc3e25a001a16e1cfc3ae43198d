@@ -1,0 +1,60 @@
+package com.alex.microserviciosDatosClientes.controller;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.alex.microserviciosDatosClientes.util.Cliente;
+import com.alex.microserviciosDatosClientes.util.Datos_Cliente;
+
+@RestController
+public class ControladorServer {
+
+	@Autowired
+	List<Cliente> clientes;
+	
+	@RequestMapping("/")
+	public Datos_Cliente get_clientes() {
+		return new Datos_Cliente(clientes);
+	}
+	@RequestMapping("/tipo/{tipo}")
+	public Datos_Cliente get_clientes_por_tipo(@PathVariable("tipo") int tipo) {
+		
+		return new Datos_Cliente(clientes.stream().filter(c->c.getTipo()==tipo).collect(Collectors.toList()));
+	}
+	@RequestMapping("numeroCuenta/{numCuenta}")
+	public Cliente get_cliente_numCuenta(@PathVariable("numCuenta") int numCuenta) {
+		for (Cliente cliente : clientes) {
+			if(cliente.getNumeroCuenta()==numCuenta) {
+				return cliente;
+			}
+		}
+		return new Cliente();
+	}
+	//<td><a th:href="@{'http://localhost:1111/cliente/delete/' + ${cliente.id}}">Eliminar</a></td>
+	@RequestMapping("cliente/delete/{id}")
+	public void eliminar_cliente(@PathVariable("id") int id) {
+		System.out.println(id+ "id");
+		for (Cliente cliente : clientes) {
+			if(cliente.getId()==id) {
+				clientes.remove(cliente);
+				break;
+			}
+		}
+		
+	}
+	@RequestMapping("cliente/add/{id}/{tipo}/{nombre}/{numcta}")
+	public void add_cliente(@PathVariable("id") int id,@PathVariable("tipo") int tipo,
+			@PathVariable("nombre") String nombre,@PathVariable("numcta") int numcta) {
+		System.out.println(id+ "id");
+		
+		
+		
+	}
+	
+	
+}

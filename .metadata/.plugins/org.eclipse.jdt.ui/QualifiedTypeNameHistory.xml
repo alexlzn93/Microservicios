@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.alex.microserviciosMostrarClientes.controller.ControladorWeb"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="com.alex.microserviciosMostrarClientes.util.Cliente"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+<fullyQualifiedTypeName name="com.alex.microserviciosDatosClientes.util.Cliente"/>
+</qualifiedTypeNameHistroy>

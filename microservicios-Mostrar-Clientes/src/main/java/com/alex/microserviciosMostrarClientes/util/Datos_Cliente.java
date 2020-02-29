@@ -1,0 +1,35 @@
+package com.alex.microserviciosMostrarClientes.util;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonRootName;
+
+
+
+@JsonRootName("Datos_Cliente")
+public class Datos_Cliente{
+
+	private List<Cliente> clientes;
+	
+	
+
+	public Datos_Cliente() {
+		super();
+		this.clientes=new ArrayList<Cliente>();
+	}
+
+	public Datos_Cliente(List<Cliente> clientes) {
+		super();
+		this.clientes = clientes;
+	}
+
+	public List<Cliente> getClientes() {
+		return clientes;
+	}
+
+	public void setClientes(List<Cliente> clientes) {
+		this.clientes = clientes;
+	}
+
+}

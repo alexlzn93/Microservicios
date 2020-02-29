@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<title>Insert title here</title>
+</head>
+<body>
+
+<a href="http://localhost:4444/clientes">Lista Clientes</a><br>
+<a href="http://localhost:4444/clientes/tipo/1">Lista Clientes Tipo1</a><br>
+<a href="http://localhost:4444/clientes/tipo/2">Lista Clientes Tipo2</a><br>
+
+<form action="http://localhost:4444/clientes/cuenta" method="post">
+	Numero de cuenta: <input type="text" name="numcta" id="numcta"/>
+	<input type="submit" name="enviar" value="enviar">
+
+</form>
+<h1> ALTA USUARIO</h1>
+<form action="http://localhost:1111/cliente/add" method="post">
+	ID: <input type="text" name="id" id="id"/>
+	Tipo <input type="text" name="tipo" id="tipo"/>
+	Numero Cuenta <input type="text" name="numcta" id="numcta"/>
+	Nombre: <input type="text" name="nombre" id="nombre"/>
+	
+	
+	<input type="submit" name="enviar" value="enviar">
+
+</form>
+</body>
+</html>

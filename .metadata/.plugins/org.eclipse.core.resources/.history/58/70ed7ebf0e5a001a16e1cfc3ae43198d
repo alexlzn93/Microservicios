@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+crossorigin="anonymous">
+<title>Clientes</title>
+</head>
+<body>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">ID Cliente</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">NumeroCuenta</th>
+    </tr>
+  </thead>
+<tr th:each="cliente: ${clientes}">
+<td th:text="${cliente.id}" />
+<td th:text="${cliente.tipo}" />
+<td th:text="${cliente.nombre}" />
+<td th:text="${cliente.numeroCuenta}" />
+</tr>
+</table>
+<table class="table table-dark">
+
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

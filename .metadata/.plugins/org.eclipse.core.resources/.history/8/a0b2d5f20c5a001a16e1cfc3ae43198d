@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Clientes</title>
+</head>
+<body>
+<table border="1">
+<tr th:each="cliente: ${clientes}">
+<td th:text="${cliente.id}" />
+<td th:text="${cliente.tipo}" />
+<td th:text="${cliente.nombre}" />
+<td th:text="${cliente.numeroCuenta}" />
+</tr>
+</table>
+<h1>El numero de cuenta ${numeroCuenta} corresponde al cliente  ${clienteCuenta }</h1>
+</body>
+</html>

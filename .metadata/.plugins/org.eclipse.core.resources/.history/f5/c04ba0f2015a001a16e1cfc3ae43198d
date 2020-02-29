@@ -1,0 +1,34 @@
+package com.alex.microserviciosMostrarClientes.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.alex.microserviciosMostrarClientes.service.ClienteSERVICE;
+import com.alex.microserviciosMostrarClientes.util.Datos_Cliente;
+
+@Controller
+public class ControladorCliente {
+
+	@Autowired
+	ClienteSERVICE clienteservice;
+	
+	@RequestMapping("/clientes")
+	public String lista_clientes(Model model) {
+		Datos_Cliente dt= clienteservice.get_datos_cliente();
+		System.out.println(dt.getClientes());
+		model.addAttribute("clientes", dt.getClientes());
+		
+		return "muestra_clientes";
+	}
+	@RequestMapping("/clientes/{tipo}")
+	public String lista_clientes_porTipo(Model model,@PathVariable("tipo") int tipo) {
+		Datos_Cliente datosClienteporTipo= clienteservice.get_datos_cliente_porTipo(tipo);
+		System.out.println(datosClienteporTipo.getClientes());
+		model.addAttribute("clientes1", datosClienteporTipo.getClientes());
+		
+		return "muestraClientesTipo";
+	}
+}

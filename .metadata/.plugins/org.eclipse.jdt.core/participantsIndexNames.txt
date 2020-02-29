@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+C:\Users\34687\Desktop\microservicios local\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2616385269.index
+\microservicios-Web-Clientes\src\main\java
+C:\Users\34687\Desktop\microservicios local\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1661333161.index
+\microservicios-Mostrar-Clientes\src\main\java
+C:\Users\34687\Desktop\microservicios local\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2963264636.index
+\microservicios-Mostrar-Clientes\src\main\java
+C:\Users\34687\Desktop\microservicios local\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2183954020.index
+\microservicios-Web-Clientes\src\main\java

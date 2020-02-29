@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<a href="http://localhost:4444/clientes">Lista Clientes</a>
+<a href="http://localhost:4444/clientes/tipo/1">Lista Clientes Tipo1</a>
+<a href="http://localhost:4444/clientes/tipo/2">Lista Clientes Tipo2</a>
+</body>
+</html>

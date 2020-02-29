@@ -1,0 +1,62 @@
+package com.alex.microserviciosDatosClientes.util;
+
+public class Cliente implements Serializable{
+
+	private int id;
+	private int tipo;
+	private String nombre;
+	private int numeroCuenta;
+	
+	
+	public Cliente() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Cliente(int id, int tipo, String nombre, int numeroCuenta) {
+		super();
+		this.id = id;
+		this.tipo = tipo;
+		this.nombre = nombre;
+		this.numeroCuenta = numeroCuenta;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(int tipo) {
+		this.tipo = tipo;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getNumeroCuenta() {
+		return numeroCuenta;
+	}
+
+	public void setNumeroCuenta(int numeroCuenta) {
+		this.numeroCuenta = numeroCuenta;
+	}
+
+	@Override
+	public String toString() {
+		return "Cliente [id=" + id + ", tipo=" + tipo + ", nombre=" + nombre + ", numeroCuenta=" + numeroCuenta + "]";
+	}
+	
+	
+}
